@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,900&family=Poppins:wght@200;400;600;700&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-size: 0.88rem;
+    font-family: Poppins , sans-serif;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    color: black;
+    background-color: aliceblue;
+    overflow-x: hidden;
+
+}
+.logo{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    width: 2rem;
+    height: 2rem;
+}
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+a{
+    color: black;
+}
+
+.container{
+    width: 96%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 12rem auto 24rem;
+    gap: 1.8rem;
+}
+
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap:0.5rem; 
+
+}
+.close{
+    margin-right:  1rem;
+    display: none;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.10);
+    border-radius: 15px;
+    height: 88vh;
+    transition: ease 0.3s all;
+    position: relative;
+    top: 20px;
+    
+    
+    
+}
+
+.sidebar:hover{
+    box-shadow: none;
+}
+
+a{
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap:1rem ;
+    left: 30px;
+    color: rgb(84, 96, 106);
+    height: 45px;
+    transition: all 0.3s ease ;
+    
+    
+    
+}
+aside .sidebar a span{
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+a:last-child{
+   
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    background-color: rgb(49, 136, 136);
+    color: aquamarine;
+    width: 100%;
+    left: 0px;
+
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    height: 20px;
+    width: 6px;
+    background-color: rgb(6, 71, 128);
+}
+
+aside .sidebar a.active span{
+    margin-left:px ;
+}
+
+aside .sidebar a:hover span{
+    margin-left: 10px;
+}
+
+aside .sidebar a .message-count{
+    background-color: rgb(209, 16, 16);
+    color: antiquewhite;
+    padding: 2px 6px;
+    font-size: 11px;
+    
+    border-radius: 10%;
+}
+
+.main{
+    margin-top: 18px;
+    
+
+}
+
+.main .analyse {
+    
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 25px   ;
+}
+ 
+.main .analyse > div{
+    background-color:white  ;
+    padding: 15px;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.10);
+    border-radius: 15px;
+    margin-top: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.main .analyse > div:hover{
+    box-shadow: none;
+}
+
+.main .analyse > div .sattus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .analyse > div .sattus h3{
+    text-align: center;
+}
+
+.main .analyse .progresss{
+    position: relative;
+    width:  92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+.main .analyse .svg{
+    position: relative;
+    width:  7rem;
+    height: 7rem;
+    
+}
+
+.main .analyse svg circle{
+    fill: none;
+    stroke: aquamarine;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: translate(5px , 5px);
+    stroke-dashoffset: -30;
+    stroke-dasharray:200;
+
+}
+ 
+
+.main .analyse .progresss .percentage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -2px;
+    left: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.usert{
+    margin-top: 10px;
+}
+
+.users{
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.10);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+
+.users:hover{
+    box-shadow: none;
+   
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    
+}
